@@ -37,8 +37,14 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
             }
             try {
                 const response = await axios.post('https://dummyjson.com/auth/login', values);
-                console.log('API Response:', response.data);
+                // console.log('API Response:', response.data.id);
                 // Handle the response
+                const token = response.data.token;
+                const username = response.data.username;
+                const email = response.data.email;
+                localStorage.setItem('authToken', token);
+                localStorage.setItem('username', username);
+                localStorage.setItem('email', email);
                 navigate("/dashboard")
             } catch (error) {
                 console.error('API Request Error:', error);
@@ -84,7 +90,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                             <div className="text-red-500" dangerouslySetInnerHTML={{ __html: formik.errors.password }} />
                         ) : null}
                     </div>
-                    <Button disabled={isLoading}>
+                    <Button disabled={isLoading} type="submit">
                         {isLoading && (
                             <div className="mr-2 h-4 w-4 animate-spin" />
                         )}

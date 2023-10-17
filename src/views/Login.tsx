@@ -1,23 +1,10 @@
 import { UserAuthForm } from '@/components/UserAuthForm'
 import { Link } from 'react-router-dom'
-import { buttonVariants } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
-
-
-
 
 const Login = () => {
     return (
         <div className="container bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-100 to-teal-100 relative hidden h-[800px] flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-            <Link
-                to="/dashboard"
-                className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "absolute right-4 top-4 md:right-8 md:top-8"
-                )}
-            >
-                Login
-            </Link>
+
             <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black" />
                 <div className="relative z-20 flex items-center text-lg font-medium">
@@ -33,16 +20,17 @@ const Login = () => {
                     >
                         <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3" />
                     </svg>
-                    Acme Inc
+                    Inc
                 </div>
                 <div className="relative z-20 mt-52">
                     <blockquote className="space-y-2">
                         <p className="text-lg">
-                            &ldquo;This library has saved me countless hours of work and
-                            helped me deliver stunning designs to my clients faster than
-                            ever before.&rdquo;
+                            Username &#58; &#34;kminchelle&#34;
                         </p>
-                        <footer className="text-sm">Sofia Davis</footer>
+                        <p className="text-lg">
+                            Password &#58; &#34;0lelplR&#34;
+                        </p>
+
                     </blockquote>
                 </div>
             </div>
