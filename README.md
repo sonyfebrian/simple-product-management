@@ -1,6 +1,7 @@
 # Product List
 
 This project was created using Vite, And React .
+You can check out the live version of this project [here](https://simple-product-management.vercel.app/).
 
 ## Initialize project
 
